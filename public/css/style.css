@@ -1,10 +1,14 @@
 /* Main paste-do styles by WaNgeL | rugorod.com */
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100&subset=latin,cyrillic);
 
 html, body {
   font-family: 'Roboto Slab', serif;
   font-size: 10px;
   background-color: #ffffff;
+}
+
+body {
+  font-size: 1.4rem;
 }
 
 .b_header {
@@ -47,6 +51,11 @@ html, body {
   background-color: #55bc75;
   color: #ffffff;
   border: none;
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  margin: 0 auto;
+  display: block;
 }
 
 /* Editor styles */
