@@ -1,22 +1,27 @@
 /* Main paste-do styles by WaNgeL | rugorod.com */
-html {
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100&subset=latin,cyrillic);
+
+html, body {
+  font-family: 'Roboto Slab', serif;
   font-size: 10px;
   background-color: #ffffff;
-}
-
-.CodeMirror, .CodeMirror-scroll {
-  min-height: 60rem;
 }
 
 .b_header {
   border-bottom: 0.1rem solid #eeeff3;
   height: 5.5rem;
+  margin-bottom: 3rem;
+}
+
+.b_preview {
+  margin: 0 2rem;
 }
 
 .b_header__brand {
   line-height: 5.5rem;
   margin: 0;
   padding: 0;
+  padding-left: 2rem;
   color: #8e7e71;
 }
 
@@ -42,4 +47,20 @@ html {
   background-color: #55bc75;
   color: #ffffff;
   border: none;
+}
+
+/* Editor styles */
+.editor-toolbar {
+  border-radius: 0;
+  border-color: #eeeff3;
+  font-size: 1.4rem;
+}
+
+.CodeMirror, .CodeMirror-scroll {
+  min-height: 60rem;
+}
+
+.CodeMirror {
+  font-size: 1.4rem;
+  border-color: #eeeff3;
 }
