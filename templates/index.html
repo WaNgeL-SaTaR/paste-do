@@ -15,37 +15,26 @@
 </head>
 <body>
 
-  <form action="/new/" method="POST">
-    <textarea name="content" rows="20" cols="80" id="paste-form">
-      # code sample
+  <div class="b_header">
+    <h1 class="b_header__brand">
+      paste-do
+    </h1>
+  </div>
 
-      >  It is practically impossible to teach good programming style to students that have had prior exposure to BASIC; as potential programmers they are mentally mutilated beyond hope of regeneration.
+  <div class="flex-container">
+    <div class="flex-item">
+      <form action="/new/" method="POST">
+        <textarea name="content" rows="20" cols="80" id="paste-form">
+          # code sample
+        </textarea>
+        <input class="btn-success" type="submit" id="paste-save" value="Save"></div>
+      </form>
+    </div>
+    <div class="flex-item">
+      preview
+    </div>
+  </div>
 
-      ![basic computer games](http://blog.codinghorror.com/content/images/uploads/2008/04/6a0120a85dcdae970b0120a86ddeee970b-pi.png)
-
-
-      ```ruby
-      puts "abc"
-      x = 0
-      for i in 0..10
-      puts "abc"
-      x = x + 1
-      puts "def"
-      end
-      ```
-
-      ## buy list
-
-      - [ ] fruits
-        + [ ] miru miru
-        + [x] gomu gomu
-      - [x] butter
-      - [ ] **MEAT!!!**
-
-
-    </textarea>
-    <input type="submit" id="paste-save" value="Save"></div>
-  </form>
 
 <!-- JS -->
 <script src="public/js/scripts.js"></script>

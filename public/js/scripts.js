@@ -20,13 +20,14 @@
   });
   simplemde.render();
 
-  // // Listen click
-  // document.getElementById('paste-save').addEventListener('click', function() {
-  //   var formData = new FormData(simplemde.value());
-  //   // Send
-  //   var xhr = new XMLHttpRequest();
-  //   xhr.open("POST", "/new/");
-  //   xhr.send(formData);
-  // });
+  // Listen click
+  document.getElementById('paste-save').addEventListener('click', function() {
+    // var formData = new FormData(simplemde.value());
+    console.log(simplemde.value());
+    // Send
+    // xhr.send(formData);
+    // var xhr = new XMLHttpRequest();
+    // xhr.open("POST", "/new/");
+  });
 
 })();
