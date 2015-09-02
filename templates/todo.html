@@ -2,33 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>paste-DO</title>
-  <!-- Style -->
-  <link href="/public/bootstrap.min.css" rel="stylesheet">
-  <link href="/public/github-markdown.css" rel="stylesheet">
-  <link href="/public/highlight-style.min.css" rel="stylesheet">
+  <title>paste-DO - {{.ID}}</title>
+  <!-- Normalize.css -->
+  <link href="public/css/normalize.css" rel="stylesheet">
+  <!-- editor -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+  <!-- Styles -->
+  <link href="public/css/style.css" rel="stylesheet" >
+  <link href="public/css/markdown-github.css" rel="stylesheet">
+
 </head>
 <body>
 
-  <!-- URL + visits counter -->
-  <h1><a href="/todo/{{.ID}}">{{.ID}}</a> (visits: {{.Visits}})</h1>
-  <!-- Controls -->
-  <a href="/todo/{{.ID}}">admin link</a> <br/>
-  <a href="/todo/{{.ID}}">read-only link</a>
-  <!-- TODO progress -->
-  <progress class="progress progress-success" value="25" max="100">25%</progress>
-  <!-- Creation time -->
-  <time>{{.CreatedAt}}</time>
-  <!-- paste content -->
-  <article class="markdown-body">
-    {{.MarkdownContent}}
-  </article>
-  <!-- paste form, content editing -->
-  <form action="/edit/{{.ID}}" method="POST">
-    <div><textarea name="content" rows="20" cols="80">{{.Content}}</textarea></div>
-    <div><input type="submit" value="Save"></div>
-  </form>
-<!-- JS -->
+  <div class="b_header">
+    <h1 class="b_header__brand">
+      <a href="/">
+        paste-do
+      </a>
+      -
+      <a href="/todo/{{.ID}}" alt="url to this paste">
+        {{.ID}}
+      </a>
+    </h1>
+    <div class="b_header__info">
+      visits/created: {{.Visits}}/{{.CreatedAt}}
+    </div>
+  </div>
 
+  <div class="flex-container">
+    <div class="flex-item">
+      <div class="b_editor">
+        <form action="/edit/{{.ID}}" method="POST">
+          <textarea name="content" rows="20" cols="80" id="paste-form">{{.Content}}</textarea>
+          <input class="btn-success" type="submit" id="paste-save" value="Save">
+        </form>
+      </div>
+    </div>
+    <div class="flex-item">
+      <div class="b_preview">
+        <div id="paste-preview" class="markdown-body">
+          {{.MarkdownContent}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- JS -->
+<script src="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+<script src="public/js/scripts.js"></script>
 </body>
 </html>

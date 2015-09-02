@@ -4,7 +4,7 @@
     element: document.getElementById('paste-form'),
     status: true,
     status: ['autosave', 'lines', 'words', 'cursor'], // Optional usage
-    // toolbar: true,
+    toolbar: ['bold', 'italic', 'heading', 'heading-smaller', 'heading-bigger', 'quote', 'code', 'unordered-list', 'numbered-list', 'link', 'image', 'horizontal-rule'],
     toolbarTips: true,
     toolbarGuideIcon: false,
     autofocus: true,
