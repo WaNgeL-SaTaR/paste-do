@@ -3,8 +3,8 @@
   var simplemde = new SimpleMDE({
     element: document.getElementById('paste-form'),
     status: true,
-    status: ['autosave', 'lines', 'words', 'cursor'], // Optional usage
-    toolbar: ['bold', 'italic', 'heading', 'heading-smaller', 'heading-bigger', 'quote', 'code', 'unordered-list', 'numbered-list', 'link', 'image', 'horizontal-rule'],
+    status: ['autosave', 'lines', 'words', 'cursor'],
+    toolbar: ['bold', 'italic', '|', 'heading', 'heading-smaller', 'heading-bigger', '|', 'quote', 'code', '|', 'unordered-list', 'numbered-list', '|', 'link', 'image', 'horizontal-rule'],
     toolbarTips: true,
     toolbarGuideIcon: false,
     autofocus: true,
@@ -14,8 +14,8 @@
     spellChecker: false,
     autosave: {
         enabled: false,
-        unique_id: 'paste-form-save',
-        delay: 10000,
+        // unique_id: 'paste-form-save',
+        // delay: 10000,
     },
   });
   simplemde.render();
