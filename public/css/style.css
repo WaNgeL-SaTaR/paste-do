@@ -19,8 +19,10 @@ body {
 .b_header__info {
   float: right;
   font-size: 1.8rem;
+  font-weight: bold;
   line-height: 5.5rem;
   color: #8e7e71;
+  padding-right: 2rem;
 }
 
 .b_preview {
@@ -31,12 +33,19 @@ body {
   margin: 0 0 2rem 0;
 }
 
-.b_header__brand {
+.b_header__brand, .b_header__brand a {
   line-height: 5.5rem;
   margin: 0;
   padding: 0;
   padding-left: 2rem;
   color: #8e7e71;
+  text-decoration: none;
+}
+
+.b_header__brand a:hover {
+  color: #8e7e71;
+  opacity: 0.8;
+  text-decoration: none;
 }
 
 .flex-container {

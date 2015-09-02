@@ -13,7 +13,7 @@
     tabSize: 2,
     spellChecker: false,
     autosave: {
-        enabled: true,
+        enabled: false,
         unique_id: 'paste-form-save',
         delay: 10000,
     },

@@ -16,17 +16,22 @@
 <body>
 
   <div class="b_header">
-    <h1 class="b_header__brand">
-      <a href="/">
-        paste-do
-      </a>
-      -
-      <a href="/todo/{{.ID}}" alt="url to this paste">
-        {{.ID}}
-      </a>
-    </h1>
-    <div class="b_header__info">
-      visits/created: {{.Visits}}/{{.CreatedAt}}
+    <div class="flex-container">
+      <div class="flex-item">
+        <h1 class="b_header__brand">
+          <a href="/">paste-do</a>
+          -
+          <a href="/todo/{{.ID}}" alt="url to this paste">
+            {{.ID}}
+          </a>
+        </h1>
+      </div>
+      <div class="flex-item">
+        <div class="b_header__info">
+          visits: {{.Visits}}
+          <!-- {{.CreatedAt}} -->
+        </div>
+      </div>
     </div>
   </div>
 
@@ -34,7 +39,9 @@
     <div class="flex-item">
       <div class="b_editor">
         <form action="/edit/{{.ID}}" method="POST">
-          <textarea name="content" rows="20" cols="80" id="paste-form">{{.Content}}</textarea>
+          <textarea name="content" rows="20" cols="80" id="paste-form">
+            {{.Content}}
+          </textarea>
           <input class="btn-success" type="submit" id="paste-save" value="Save">
         </form>
       </div>
